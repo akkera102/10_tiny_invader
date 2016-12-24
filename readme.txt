@@ -1,7 +1,7 @@
-Tiny Degital Invader - 7-segment display
+Tiny Digital Invader - 7-segment display
 
 ## Description
-Tiny Degital Invader is Casio MG-880 Calculator(1980) game clone.
+Tiny Digital Invader is Casio MG-880 Calculator(1980) game clone.
 This game use only 8 * 7-segment display.
 
 
