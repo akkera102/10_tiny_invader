@@ -39,6 +39,10 @@ void ChrExec(void)
 			// wait draw
 			GameSetCnt((Chr.sel == 10) ? 23 : 6);
 		}
+		else
+		{
+			GameSetCnt(6);
+		}
 	}
 
 	if(trg & KEY_L)

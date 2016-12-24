@@ -86,19 +86,6 @@ void GameExecPlay(void)
 		return;
 	}
 
-	if(EnemyIsChrHit() == TRUE)
-	{
-		if(ChrIsHp() == TRUE)
-		{
-			GameSetAct(GAME_ACT_OVER);
-		}
-		else
-		{
-			GameSetAct(GAME_ACT_HIT);
-		}
-		return;
-	}
-
 
 	ChrDraw();
 	EnemyDraw();
@@ -110,6 +97,19 @@ void GameExecPlay(void)
 	if(ChrIsShotEmpty() == TRUE)
 	{
 		GameSetAct(GAME_ACT_OVER);
+		return;
+	}
+
+	if(EnemyIsChrHit() == TRUE)
+	{
+		if(ChrIsHp() == TRUE)
+		{
+			GameSetAct(GAME_ACT_OVER);
+		}
+		else
+		{
+			GameSetAct(GAME_ACT_HIT);
+		}
 		return;
 	}
 }
