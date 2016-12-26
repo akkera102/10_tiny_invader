@@ -151,9 +151,14 @@ void GameExecOver(void)
 	GameDrawScore();
 	ResDrawMsg();
 
+	if(Game.cnt == 0)
+	{
+		Game.cnt++;
+		MemSave(EnemyGetScore());
+	}
+
 	if(KeyGetTrg() & KEY_A)
 	{
-		MemSave(EnemyGetScore());
 		GameSetAct(GAME_ACT_RESET);
 	}
 }
