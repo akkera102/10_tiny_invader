@@ -36,8 +36,7 @@ void ChrExec(void)
 		{
 			EnemyDel(Chr.sel);
 
-			// wait draw
-			GameSetCnt((Chr.sel == 10) ? 23 : 6);
+			GameSetCnt((Chr.sel == 10) ? 23 : 6);		// wait draw
 		}
 		else
 		{

@@ -67,8 +67,13 @@ void EnemyExec(void)
 		Enemy.isHit = TRUE;
 		return;
 	}
-
 	EnemyMove();
+
+
+	if(Enemy.cnt == 0)
+	{
+		return;
+	}
 	EnemyAdd();
 }
 //---------------------------------------------------------------------------
@@ -104,12 +109,6 @@ void EnemyMove(void)
 //---------------------------------------------------------------------------
 void EnemyAdd(void)
 {
-	if(Enemy.cnt == 0)
-	{
-		return;
-	}
-
-
 	s8 num = Rnd(10);
 
 	if(Enemy.isUfo == TRUE)

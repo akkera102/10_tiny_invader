@@ -16,12 +16,10 @@ void MemInit(void)
 	if(MemIsSave() == TRUE)
 	{
 		MemLoad();
-		MemSave(0);
+		
 	}
-	else
-	{
-		MemSave2();
-	}
+
+	MemSave(0);
 }
 //---------------------------------------------------------------------------
 void MemLoad(void)
@@ -52,27 +50,9 @@ void MemSave(u16 score)
 	EepWrite32(Rnd32() + score);
 }
 //---------------------------------------------------------------------------
-void MemSave2(void)
-{
-	EepSeek(0);
-
-	EepWrite8('I');
-	EepWrite8('N');
-	EepWrite8('V');
-	EepWrite8('A');
-
-	EepWrite16(0);
-	EepWrite32(Rnd32());
-}
-//---------------------------------------------------------------------------
 u16 MemGetScoreHigh(void)
 {
 	return Mem.scoreHigh;
-}
-//---------------------------------------------------------------------------
-u32 MemGetRandSeed(void)
-{
-	return Mem.randSeed;
 }
 //---------------------------------------------------------------------------
 bool MemIsSave(void)

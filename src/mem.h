@@ -21,10 +21,8 @@ typedef struct {
 void MemInit(void);
 void MemLoad(void);
 void MemSave(u16 score);
-void MemSave2(void);
 
 u16  MemGetScoreHigh(void);
-u32  MemGetRandSeed(void);
 bool MemIsSave(void);
 
 
