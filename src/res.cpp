@@ -18,10 +18,10 @@ const unsigned char* ResNumList[] = {
 	bmpNa,
 };
 
-const unsigned char* ResHpList[] = {
-	bmpH1,
-	bmpH2,
-	bmpH3,
+const unsigned char* ResBarList[] = {
+	bmpB1,
+	bmpB2,
+	bmpB3,
 };
 //---------------------------------------------------------------------------
 void ResInit(void)
@@ -40,7 +40,7 @@ void ResDrawBar(u8 pos, u8 num)
 {
 	ASSERT(num - 1 < 3);
 
-	OledDrawBmp(pos*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)ResHpList[num - 1]);
+	OledDrawBmp(pos*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)ResBarList[num - 1]);
 }
 //---------------------------------------------------------------------------
 void ResDrawMsg(void)
