@@ -54,7 +54,7 @@ void ChrExec(void)
 void ChrDraw(void)
 {
 	ResDrawNum(0, Chr.sel);
-	ResDrawHp(Chr.hp);
+	ResDrawBar(1, Chr.hp);
 
 //	OledDrawStr(0, 7, "shot:%d", Chr.shot);
 }

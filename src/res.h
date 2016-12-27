@@ -18,8 +18,7 @@ extern "C" {
 void ResInit(void);
 
 void ResDrawNum(u8 pos, u8 num);
-void ResDrawHp(u8 num);
-void ResDrawBar(u8 num);
+void ResDrawBar(u8 pos, u8 num);
 void ResDrawMsg(void);
 
 

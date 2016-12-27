@@ -36,16 +36,11 @@ void ResDrawNum(u8 pos, u8 num)
 	OledDrawBmp(pos*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)ResNumList[num]);
 }
 //---------------------------------------------------------------------------
-void ResDrawHp(u8 num)
+void ResDrawBar(u8 pos, u8 num)
 {
 	ASSERT(num - 1 < 3);
 
-	OledDrawBmp(1*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)ResHpList[num - 1]);
-}
-//---------------------------------------------------------------------------
-void ResDrawBar(u8 num)
-{
-	OledDrawBmp(num*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)bmpBar);
+	OledDrawBmp(pos*RES_NUM_CX, OLED_SCREEN_CY/2 - RES_NUM_CY/2, (u8*)ResHpList[num - 1]);
 }
 //---------------------------------------------------------------------------
 void ResDrawMsg(void)

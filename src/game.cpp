@@ -188,7 +188,7 @@ void GameDrawCount(void)
 {
 	ResDrawNum(3, 1);
 	ResDrawNum(4, 6);
-	ResDrawBar(5);
+	ResDrawBar(5, 1);
 	ResDrawNum(6, 3);
 	ResDrawNum(7, 0);
 }
@@ -196,7 +196,7 @@ void GameDrawCount(void)
 void GameDrawPattern(void)
 {
 	ResDrawNum(0, EnemyGetPattern() + 1);
-	ResDrawBar(1);
+	ResDrawBar(1, 1);
 }
 //---------------------------------------------------------------------------
 void GameSetAct(u8 act)
