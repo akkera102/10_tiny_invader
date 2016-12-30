@@ -44,7 +44,7 @@ typedef struct {
 void EnemyInit(void);
 void EnemyInit2(void);
 void EnemyInit3(void);
-void EnemyInit4(s8 par, s8 pat, s8 cnt, u16 sco);
+void EnemyInit4(s8 par, s8 pat, s8 cnt, u16 sco, bool isUfo);
 void EnemyExec(void);
 void EnemyDraw(void);
 

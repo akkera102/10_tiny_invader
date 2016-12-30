@@ -17,7 +17,7 @@ ST_ENEMY Enemy;
 //---------------------------------------------------------------------------
 void EnemyInit(void)
 {
-	EnemyInit4(0, 0, ENEMY_MAX_CNT, 0);
+	EnemyInit4(0, 0, ENEMY_MAX_CNT, 0, FALSE);
 }
 //---------------------------------------------------------------------------
 void EnemyInit2(void)
@@ -32,15 +32,15 @@ void EnemyInit2(void)
 		}
 	}
 
-	EnemyInit4(Enemy.part, Enemy.pattern, ENEMY_MAX_CNT, Enemy.score);
+	EnemyInit4(Enemy.part, Enemy.pattern, ENEMY_MAX_CNT, Enemy.score, FALSE);
 }
 //---------------------------------------------------------------------------
 void EnemyInit3(void)
 {
-	EnemyInit4(Enemy.part, Enemy.pattern, Enemy.cnt + Enemy.dispCnt, Enemy.score);
+	EnemyInit4(Enemy.part, Enemy.pattern, Enemy.cnt + Enemy.dispCnt, Enemy.score, Enemy.isUfo);
 }
 //---------------------------------------------------------------------------
-void EnemyInit4(s8 par, s8 pat, s8 cnt, u16 sco)
+void EnemyInit4(s8 par, s8 pat, s8 cnt, u16 sco, bool isUfo)
 {
 	_Memset(&Enemy, 0x00, sizeof(ST_ENEMY));
 
@@ -49,6 +49,7 @@ void EnemyInit4(s8 par, s8 pat, s8 cnt, u16 sco)
 	Enemy.cnt      = cnt;
 	Enemy.score    = sco;
 	Enemy.dispMax  = (par == 0) ? ENEMY_MAX_DISPLAY : ENEMY_MAX_DISPLAY-1;
+	Enemy.isUfo    = isUfo;
 
 	EnemyAdd();
 }
