@@ -48,6 +48,10 @@ etc             : Visual Studio 2015 C#
 sound function
 
 
+## License
+GPL v2
+
+
 ## History
 v1.00 2016/12/24    first version
 
