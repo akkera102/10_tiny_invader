@@ -1,6 +1,8 @@
 MAKEFLAGS	+=--no-print-directory
 
 BINPATH			= "C:/Program Files (x86)/Arduino/hardware/tools/avr/bin/"
+CONFFILE		= "C:/Program Files (x86)/Arduino/hardware/tools/avr/etc/avrdude.conf"
+COM				= COM3
 
 ARDUBOY_MODEL	= ARDUBOY_10
 #ARDUBOY_MODEL	= ARDUBOY_DEVKIT
@@ -56,10 +58,12 @@ DFILES	= $(addprefix $(OBJDIR)/, $(addsuffix .d, $(notdir $(CFILES))))
 
 #=============================================================================
 
-.PHONY: all
+.PHONY: all usb
 all: 
 	@make $(TARGET_HEX)
 
+usb:
+	@$(BINPATH)avrdude -C$(CONFFILE) -v -patmega32u4 -cavr109 -P$(COM) -b57600 -D -Uflash:w:$(TARGET_HEX):i
 
 #=============================================================================
 

@@ -7,7 +7,6 @@ del test.*
 make
 avr-size test.elf -C --mcu=atmega32u4
 
-
 pause
 cls
 goto loop

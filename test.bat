@@ -1,8 +1,8 @@
 @echo off
 SET VAL1="C:\Program Files (x86)\Arduino\hardware\tools\avr\bin"
-SET VAL2=COM3
+SET VAL2=COM4
 SET VAL3="C:\Program Files (x86)\Arduino\hardware\tools\avr\etc\avrdude.conf"
-SET VAL4=COM4
+SET VAL4=COM3
 
 set PATH=%VAL1%;%PATH%
 

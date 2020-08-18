@@ -39,7 +39,7 @@ B    : fire
 
 
 ## Development
-compiler        : windows Arduino IDE 1.8.0(avr-gcc) + 1.0.6(make.exe)
+compiler        : windows Arduino IDE 1.8.13(avr-gcc) + 1.0.6(make.exe)
 image converter : python 2.6 + Pillow
 etc             : Visual Studio 2015 C#
 
@@ -50,24 +50,3 @@ sound function
 
 ## License
 GPL v2
-
-
-## History
-v1.00 2016/12/24    first version
-
-
-## License
-GNU General Public License
-
-
-Arduboy 1.0 infomation.
-
-AVR Memory Usage
-----------------
-Device: atmega32u4
-
-Program:   13516 bytes (41.2% Full)
-(.text + .data + .bootloader)
-
-Data:       1384 bytes (54.1% Full)
-(.data + .bss + .noinit)
